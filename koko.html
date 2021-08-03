@@ -1,0 +1,25 @@
+var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://steppschuh-json-porn-v1.p.rapidapi.com/porn/',
+  params: {
+    genreId: '5245132710346752',
+    actorId: '5681034041491456',
+    count: '5',
+    pornType: '4',
+    producerId: '4554967436230656',
+    pornId: '5073292679446528',
+    offset: '0'
+  },
+  headers: {
+    'x-rapidapi-key': 'f847514788msha0a90a9366c5c57p1cfaf0jsn5522ec4aa157',
+    'x-rapidapi-host': 'steppschuh-json-porn-v1.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
